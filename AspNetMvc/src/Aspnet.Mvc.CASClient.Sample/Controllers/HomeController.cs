@@ -20,7 +20,8 @@ namespace Aspnet.Mvc.CASClient.Sample.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        [Authorize]
+        public ActionResult Secrete()
         {
             ViewBag.Message = "Your contact page.";
 
