@@ -59,6 +59,12 @@
             </div>
         </div>
         <div class="container body-content">
+
+            <% if (HttpContext.Current.User.Identity.IsAuthenticated)
+                { %>
+                <h1><%: HttpContext.Current.User.Identity.Name %></h1>
+            <%} %>
+
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
