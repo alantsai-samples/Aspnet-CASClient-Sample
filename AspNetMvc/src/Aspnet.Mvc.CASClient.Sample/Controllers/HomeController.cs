@@ -20,6 +20,13 @@ namespace Aspnet.Mvc.CASClient.Sample.Controllers
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            DotNetCasClient.CasAuthentication.ClearAuthCookie();
+
+            return RedirectToAction("Index");
+        }
+
         [Authorize]
         public ActionResult Secrete()
         {

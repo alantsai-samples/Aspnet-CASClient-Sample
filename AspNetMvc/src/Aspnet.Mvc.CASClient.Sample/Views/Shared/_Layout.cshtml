@@ -22,7 +22,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Secrete", "Secrete", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="container body-content">
         @if (User.Identity.IsAuthenticated)
         {
-            <h1>@User.Identity.Name</h1>
+            <h1>@User.Identity.Name - @Html.ActionLink("登出", "Logout")</h1>
         }
         @RenderBody()
         <hr />
