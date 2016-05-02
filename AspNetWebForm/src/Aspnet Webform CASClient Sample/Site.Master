@@ -62,7 +62,7 @@
 
             <% if (HttpContext.Current.User.Identity.IsAuthenticated)
                 { %>
-                <h1><%: HttpContext.Current.User.Identity.Name %></h1>
+                  <h1><%: HttpContext.Current.User.Identity.Name %> - <a href="Logout.aspx">登出</a></h1>
             <%} %>
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
